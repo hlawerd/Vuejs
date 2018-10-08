@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="text-align:center">Binding inline styles</h1>
+
+        <div id="app2">
+
+            <h1 v-if="isActive" >{{name}}</h1>
+            <h1 v-else-if="name === 'Hugo Leonardo' ">Hey Hugo, What's Up?</h1>
+            <h1 v-else>NO USER</h1>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+   <script >
+    let vm = new Vue({
+                el: '#app2',
+                data: {
+                    isActive: false,
+                    name:'Hugo Leonardo'
+                    
+                }
+            })
+   </script>
+    </body> 
+</html>

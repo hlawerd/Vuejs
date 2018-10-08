@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">Binding inline styles</h1>
+        <div id="app2">
+
+            <h1>Hugo Leonardo {{isActive === 'active' ? 'is Active' : 'not Active'}}</h1>
+            
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+   <script >
+    let vm = new Vue({
+                el: '#app2',
+                data: {
+                    isActive: 'not Active'                    
+                },
+                watch: {
+                    isActive: ()=>{
+                        alert('Sending an email');
+                    }
+                }
+                
+            })
+   </script>
+    </body> 
+</html>

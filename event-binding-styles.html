@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .active {color: green}
+            .notActive {color: red}
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">Binding inline styles</h1>
+        <div id="app2">
+            <button @click="increaseFont">Increase</button>
+            <button @click="decreaseFont">Decrease</button>
+
+            <div :style="{color: 'red', fontSize: fontSize + 'px'}">{{message}}</div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+   <script >
+    let vm = new Vue({
+                el: '#app2',
+                data: {
+                    message:'Hello',
+                    fontSize: 12,
+                    
+                },
+
+                methods: {
+                    increaseFont(){
+                        this.fontSize++
+                    },
+                    decreaseFont(){
+                        this.fontSize--
+                    }
+                }
+            })
+   </script>
+    </body> 
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="text-align:center">Binding inline styles</h1>
+
+        <div id="app2">
+
+            <ul>
+                <li v-for="post in posts" :key="post.id">{{post.title}}</li>
+            </ul>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+   <script >
+    let vm = new Vue({
+                el: '#app2',
+                data: {
+                    posts: [
+                        {id: 1, title: 'Post-1', body: 'kjdfhskfhskfhksksks'},
+                        {id: 2, title: 'Post-2', body: 'kjdfhskfhskfhksksks'},
+                        {id: 3, title: 'Post-3', body: 'kjdfhskfhskfhksksks'},
+                        {id: 4, title: 'Post-4', body: 'kjdfhskfhskfhksksks'},
+                    ]
+                    
+                }
+            })
+   </script>
+    </body> 
+</html>
